@@ -1,0 +1,50 @@
+<div
+  class="group overflow-hidden bg-gray-900 border border-gray-800 rounded-lg shadow-sm select-none"
+>
+  <div class="overflow-hidden">
+    <div class="relative">
+      <div class="absolute top-2 right-2 z-50" (click)="onHeartClicked()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="white"
+          class="size-7 hover:scale-120 cursor-pointer"
+        >
+          <path
+            d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"
+          />
+        </svg>
+      </div>
+    </div>
+    <a [routerLink]="['/products/', product.id]" draggable="false">
+      <img
+        class="aspect-16/9 object-cover w-full transition-transform group-hover:scale-105"
+        src="https://www.bmw-motorrad.ch/content/dam/bmwmotorradnsc/common/images/models/sport/overview/2024/imagecolumncopy/nsc-overview-sport-performance-idea-imagecolumncopy.jpg.asset.1729017774716.jpg"
+    /></a>
+  </div>
+  <a [routerLink]="['/products/', product.id]" draggable="false">
+    <div class="p-3">
+      <div class="text-center text-xl">
+        <span class="font-bold me-1">{{ product.make }}</span>
+        <span class="me-1">{{ product.name }}</span>
+        <span class="font-italic">{{ product.year }}</span>
+      </div>
+      <div class="grid grid-cols-2 gap-3 my-3">
+        <div class="bg-gray-800 rounded-lg p-2">
+          {{ product.kilometers | swissNumberFormat : false }} km
+        </div>
+        <div class="bg-gray-800 rounded-lg p-2">
+          {{ product.horsepower | swissNumberFormat : false }} PS
+        </div>
+        <div class="col-span-2 bg-gray-800 rounded-lg p-2">
+          {{ product.condition }}
+        </div>
+      </div>
+      <div
+        class="text-center font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-indigo-300"
+      >
+        CHF {{ product.price | swissNumberFormat : false : true }}
+      </div>
+    </div>
+  </a>
+</div>

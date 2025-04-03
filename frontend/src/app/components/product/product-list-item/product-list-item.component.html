@@ -1,5 +1,5 @@
 <div
-  class="group overflow-hidden bg-gray-900 border border-gray-800 rounded-lg shadow-sm select-none"
+  class="group flex flex-col h-full overflow-hidden bg-gray-900 border border-gray-800 rounded-lg shadow-sm select-none"
 >
   <div class="overflow-hidden">
     <div class="relative">
@@ -24,10 +24,12 @@
   </div>
   <a [routerLink]="['/products/', product.id]" draggable="false">
     <div class="p-3">
-      <div class="text-center text-xl">
-        <span class="font-bold me-1">{{ product.make }}</span>
+      <div class=" text-xl min-h-[60px] flex items-center">
+       <span>
+          <span class="font-bold me-1">{{ product.make }}</span>
         <span class="me-1">{{ product.name }}</span>
         <span class="font-italic">{{ product.year }}</span>
+      </span>
       </div>
       <div class="grid grid-cols-2 gap-3 my-3">
         <div class="bg-gray-800 rounded-lg p-2">
@@ -36,12 +38,17 @@
         <div class="bg-gray-800 rounded-lg p-2">
           {{ product.horsepower | swissNumberFormat : false }} PS
         </div>
-        <div class="col-span-2 bg-gray-800 rounded-lg p-2">
+        <div class="bg-gray-800 rounded-lg p-2">
           {{ product.condition }}
-        </div>
+        </div>   
+        <a [routerLink]="['/seller', 1]" class="block">
+          <div class="bg-indigo-800 rounded-lg p-2 text-white text-center">
+            Von {{ "SellerName22" }}
+          </div>
+        </a>
       </div>
       <div
-        class="text-center font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-indigo-300"
+        class="text-center font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-800 to-indigo-200"
       >
         CHF {{ product.price | swissNumberFormat : false : true }}
       </div>

@@ -6,11 +6,10 @@ import { ProductListItemComponent } from '../product-list-item/product-list-item
 import { Bike } from '../../../models/bike.model';
 
 @Component({
-  selector: 'app-product-list',
-  standalone: true,
-  imports: [CommonModule, RouterModule, ProductListItemComponent],
-  templateUrl: './product-list.component.html',
-  styleUrl: './product-list.component.css',
+    selector: 'app-product-list',
+    imports: [CommonModule, RouterModule, ProductListItemComponent],
+    templateUrl: './product-list.component.html',
+    styleUrl: './product-list.component.css'
 })
 export class ProductListComponent {
   protected mockProducts: Bike[] = [

@@ -5,11 +5,10 @@ import { SwissNumberFormatPipe } from '../../../pipes/swiss-number-format/swiss-
 import { Bike } from '../../../models/bike.model';
 
 @Component({
-  selector: 'app-product-list-item',
-  standalone: true,
-  imports: [RouterModule, CommonModule, SwissNumberFormatPipe],
-  templateUrl: './product-list-item.component.html',
-  styleUrl: './product-list-item.component.css',
+    selector: 'app-product-list-item',
+    imports: [RouterModule, CommonModule, SwissNumberFormatPipe],
+    templateUrl: './product-list-item.component.html',
+    styleUrl: './product-list-item.component.css'
 })
 export class ProductListItemComponent {
   @Input() product!: Bike;

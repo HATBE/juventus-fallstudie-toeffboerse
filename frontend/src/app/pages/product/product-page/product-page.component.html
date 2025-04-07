@@ -1,4 +1,83 @@
-<section class="container mx-auto">
-    product
+<section class="container mx-auto mb-3">
+  <nav
+    class="flex px-5 py-3 text-gray-700 border border-gray-800 rounded-lg bg-gray-900"
+    aria-label="Breadcrumb"
+  >
+    <ol
+      class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse"
+    >
+      <li class="inline-flex items-center">
+        <a
+          href="#"
+          class="inline-flex items-center text-sm font-medium text-gray-400 hover:text-white"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <div class="flex items-center">
+          <svg
+            class="rtl:rotate-180 block w-3 h-3 mx-1 text-gray-400"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 9 4-4-4-4"
+            />
+          </svg>
+          <a
+            href="#"
+            class="ms-1 text-sm font-medium md:ms-2 text-gray-400 hover:text-white"
+            >Category</a
+          >
+        </div>
+      </li>
+      <li aria-current="page">
+        <div class="flex items-center">
+          <svg
+            class="rtl:rotate-180 w-3 h-3 mx-1 text-gray-400"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 9 4-4-4-4"
+            />
+          </svg>
+          <span class="ms-1 text-sm font-medium md:ms-2 text-gray-400"
+            >Product name</span
+          >
+        </div>
+      </li>
+    </ol>
+  </nav>
 </section>
-  
+
+<section class="container mx-auto grid grid-cols-1 md:grid-cols-2">
+  <div class="">
+    <img
+      class="aspect-16/9 object-cover w-full rounded-lg"
+      src="https://www.bmw-motorrad.ch/content/dam/bmwmotorradnsc/common/images/models/sport/overview/2024/imagecolumncopy/nsc-overview-sport-performance-idea-imagecolumncopy.jpg.asset.1729017774716.jpg"
+    />
+  </div>
+  <div>
+    <div>{{ "18000" | swissNumberFormat : false }} km</div>
+    <div>{{ "74" | swissNumberFormat : false }} PS</div>
+    <div>{{ "Gebraucht" }}</div>
+    <div>von {{ "SellerName22" }}</div>
+  </div>
+  <div class="mt-3">
+    <app-user-profile-card></app-user-profile-card>
+  </div>
+</section>
